@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CardFilm from './CardFilm';
-import Card from './card';
+import Card from './CardNormal';
 
 export default function SearchBar({ category }) {
   const [searchTerm, setSearchTerm] = useState('');

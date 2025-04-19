@@ -17,9 +17,9 @@ export const Navbar = () => {
         </div>
 
         {/* Logo Star Wars en el centro */}
-        <div className="flex items-center space-x-4">
+        <div className="md:hidden flex items-center space-x-4 ">
           <img 
-            src="img/Star_Wars_Logo.svg" 
+            src="img/Star_Wars_Logo2.svg" 
             alt="Star Wars Logo" 
             className="w-24"
           />
@@ -41,9 +41,8 @@ export const Navbar = () => {
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
             className="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+            {/* Usando el icono desde la carpeta img */}
+            <img src="img/bars-solid.svg" alt="Menu Icon" className="w-10 h-10" />
           </button>
         </div>
       </div>
@@ -51,12 +50,12 @@ export const Navbar = () => {
       {/* Menú móvil */}
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col space-y-4 mt-4">
-          <Link to="/films" className="hover:text-yellow-500">Films</Link>
-          <Link to="/people" className="hover:text-yellow-500">People</Link>
-          <Link to="/planets" className="hover:text-yellow-500">Planets</Link>
-          <Link to="/species" className="hover:text-yellow-500">Species</Link>
-          <Link to="/starships" className="hover:text-yellow-500">Starships</Link>
-          <Link to="/vehicles" className="hover:text-yellow-500">Vehicles</Link>
+          <Link to="/films" className="hover:text-yellow-500 transition-all duration-300 font-semibold">Films</Link>
+          <Link to="/people" className="hover:text-yellow-500 transition-all duration-300 font-semibold">People</Link>
+          <Link to="/planets" className="hover:text-yellow-500 transition-all duration-300 font-semibold">Planets</Link>
+          <Link to="/species" className="hover:text-yellow-500 transition-all duration-300 font-semibold">Species</Link>
+          <Link to="/starships" className="hover:text-yellow-500 transition-all duration-300 font-semibold">Starships</Link>
+          <Link to="/vehicles" className="hover:text-yellow-500 transition-all duration-300 font-semibold">Vehicles</Link>
         </div>
       )}
     </div>
